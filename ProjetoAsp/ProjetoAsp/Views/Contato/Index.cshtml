@@ -1,0 +1,50 @@
+﻿<!Doctype html>
+<html>
+<head>
+
+    <title>
+        Contato
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width =device-width" />
+
+</head>
+
+<body>
+
+    <h1>Contato</h1>
+
+    <div id="container">
+
+        <form method="post" action="/contato/receberContato">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" class="form-control" id="nome" placeholder="Digite seu nome">
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="text" name="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+            </div>
+
+            <div class="form-group">
+                <label for="assunto">Assunto</label>
+                <input type="text" name="assunto" class="form-control" id="assunto" placeholder="Digite o seu assunto">
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" class="form-control" id="mensagem" placeholder="Digite sua mensagem"> </textarea>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
