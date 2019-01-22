@@ -17,18 +17,11 @@ namespace ProjetoAsp.Controllers
             return View();
         }
 
-        // Obtendo manualmente 
-        public IActionResult ReceberContato()
+        
+        public IActionResult ReceberContato([FromForm] Contato contato)
         {
             //Post = Request.Form
-            //Get = Request.QueryString
-
-            Contato contato = new Contato();
-
-            contato.Nome = Request.Form["nome"];
-            contato.Email = Request.Form["email"];
-            contato.Assunto = Request.Form["assunto"];
-            contato.Mensagem = Request.Form["mensagem"];
+            //Get = Request.QueryString        
 
             if(ModelState.IsValid)
             {

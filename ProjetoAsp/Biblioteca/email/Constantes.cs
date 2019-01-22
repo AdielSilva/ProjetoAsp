@@ -14,7 +14,7 @@ namespace ProjetoAsp.Biblioteca.email
 
             //Autenticação gmail
         public readonly static string usuario = "adiel.793@gmail.com";
-        public readonly static string Senha = "tristanet16";
+        public readonly static string Senha = "";
 
         //Servidor STMP
 

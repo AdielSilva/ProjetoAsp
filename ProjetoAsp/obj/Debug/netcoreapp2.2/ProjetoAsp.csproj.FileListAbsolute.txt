@@ -21,3 +21,4 @@ C:\Users\Hamilton\Desktop\Adiel\Asp_Udemy\ProjetoAsp\ProjetoAsp\obj\Debug\netcor
 C:\Users\Hamilton\Desktop\Adiel\Asp_Udemy\ProjetoAsp\ProjetoAsp\obj\Debug\netcoreapp2.2\ProjetoAsp.pdb
 C:\Users\Hamilton\Desktop\Adiel\Asp_Udemy\ProjetoAsp\ProjetoAsp\obj\Debug\netcoreapp2.2\ProjetoAsp.csproj.CopyComplete
 C:\Users\Hamilton\Desktop\Adiel\Asp_Udemy\ProjetoAsp\ProjetoAsp\obj\Debug\netcoreapp2.2\Razor\Views\Contato\Index.g.cshtml.cs
+C:\Users\Hamilton\Desktop\Adiel\Asp_Udemy\ProjetoAsp\ProjetoAsp\obj\Debug\netcoreapp2.2\ProjetoAsp.csprojAssemblyReference.cache

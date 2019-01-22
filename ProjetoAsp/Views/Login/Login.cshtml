@@ -18,21 +18,30 @@
 
     <div id="container">
 
-        <br />
-        <form method="post" action="/home/login">
+        <form method="post" action="/contato/receberContato">
             <div class="form-group">
-                <label for="nome">Email</label>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" class="form-control" id="nome" placeholder="Digite seu nome">
+            </div>
+            @Html.ValidationMessage("nome")
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
                 <input type="text" name="email" class="form-control" id="email" placeholder="Digite seu e-mail">
             </div>
             @Html.ValidationMessage("email")
 
             <div class="form-group">
-                <label for="email">Senha</label>
-                <input type="text" name="senha" class="form-control" id="senha" placeholder="Digite sua senha">
+                <label for="assunto">Assunto</label>
+                <input type="text" name="assunto" class="form-control" id="assunto" placeholder="Digite o seu assunto">
             </div>
-            @Html.ValidationMessage("senha")
 
-            
+
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" class="form-control" id="mensagem" placeholder="Digite sua mensagem"> </textarea>
+            </div>
+            @ViewBag.Mensagem
 
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
