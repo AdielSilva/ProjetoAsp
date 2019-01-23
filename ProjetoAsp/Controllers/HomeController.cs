@@ -19,27 +19,36 @@ namespace ProjetoAsp.Controllers
 
 
         [HttpGet]
-        public IActionResult Logar()
+        public IActionResult Login()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Logar([FromForm] Usuario usuario)
+        public IActionResult Login([FromForm] Usuario usuario)
         {   
 
             if(ModelState.IsValid)
             {
-                if (usuario.Email == "adiel.793@gmail.com" && usuario.Sennha == "123")
+                if (usuario.Email == "adiel.793@gmail.com" && usuario.Senha == "123")
                 {
-                    return Redirect("google.com");
+                    return RedirectToAction("index", "palavra");
                 }
+
+                else
+                {
+                    ViewBag.Mensagem = "deu ruim";
+                    return View();
+                }
+               
             }
 
             else
             {
-                return ViewBag.Mensagem =  "";
+                ViewBag.Mensagem =  "deu ruim" ;
+                return View();
             }
+
           
         }
     }

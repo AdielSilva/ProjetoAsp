@@ -1,0 +1,46 @@
+﻿<!Doctype html>
+<html>
+<head>
+
+    <title>
+        Login
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width =device-width" />
+
+</head>
+
+<body>
+
+    <h1>Login Realizado</h1>
+
+    <div id="container">
+
+        <form method="post" action="/home/login">
+            <div class="form-group">
+                <label for="nome">Email</label>
+                <input type="text" name="email" class="form-control" id="email" placeholder="Digite seu email">
+            </div>
+            @Html.ValidationMessage("nome")
+
+            <div class="form-group">
+                <label for="email">Senha</label>
+                <input type="text" name="senha" class="form-control" id="senha" placeholder="Digite sua senha">
+            </div>
+            @Html.ValidationMessage("email")
+
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+        @ViewBag.Mensagem
+
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+﻿@model  ProjetoAsp.Models.Palavra
+<!Doctype html>
+<html>
+<head>
+
+    <title>
+        Palavra
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width =device-width" />
+
+</head>
+
+<body>
+
+    <div class="container">
+    
+        <form method="post">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" value="@Model.Nome" class="form-control" id="nome" placeholder="Digite a palavra">
+            </div>
+            @Html.ValidationMessage("nome")
+
+            <div class="form-group">
+                <label for="nivel">Nivel</label>
+                <input type="text" name="nivel" value="@Model.Nivel" class="form-control" id="nivel" placeholder="Digite o nivel 1-Facil 2-Medio 3-Dificil">
+            </div>
+            @Html.ValidationMessage("nivel")
+
+
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+
+    </div>
+</body>
+</html>

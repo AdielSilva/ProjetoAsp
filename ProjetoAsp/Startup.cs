@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using ProjetoAsp.Database;
 
 namespace ProjetoAsp
 {
@@ -16,6 +18,12 @@ namespace ProjetoAsp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<DataBaseContext>(options =>
+            {
+                //Providers (bibliotecas)  conexões com banco de dados
+                options.UseSqlServer("Server=(localdb)\\mssqllocaldb; Database=site01; Integrated Security=True;");
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

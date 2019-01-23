@@ -1,0 +1,56 @@
+﻿@model List<ProjetoAsp.Models.Palavra>
+
+<!Doctype html>
+<html>
+<head>
+
+    <title>
+        Palavra 
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width =device-width" />
+
+</head>
+
+<body>
+
+   
+    <div class="container">
+        <a href="/palavra/cadastrar" class="btn btn-primary"> Cadastrar</a>
+
+        <span>Total de registro @Model.Count</span>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Palavra</th>
+                    <th scope="col">Nivel</th>
+                    <th scope="col">Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+
+               @foreach (var palavra in Model)
+                {
+
+                    <tr>
+                        <th scope="row">@palavra.Id</th>
+                        <td>@palavra.Nome</td>
+                        <td>@palavra.Nivel</td>
+                        <td>
+                            <a href="/palavra/atualizar" class="btn">Editar</a>
+                            <a href="/palavra/excluir/1" class="btn">Excluir</a>
+                        </td>
+                     </tr>
+                   
+                  
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>
